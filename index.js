@@ -30,6 +30,12 @@ bot.launch();
 // تنظیم Webhook هنگام راه‌اندازی
 setWebhook();
 
+// چک کردن هر 30 ثانیه
+setInterval(() => {
+  console.log('Checking webhook...');
+  // می‌توانید هر عملیات دیگری که نیاز دارید اینجا انجام دهید
+}, 30000); // هر 30 ثانیه یک‌بار
+
 // برای مدیریت وقفه ها
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
